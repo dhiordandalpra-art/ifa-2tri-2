@@ -1,0 +1,290 @@
+:root {
+    --primaria: #4A154B;       /* Roxo escuro para títulos e cabeçalhos (inspirado nas canetas do infográfico) */
+    --secundaria: #007A5A;     /* Verde esmeralda para os destaques e funções primordiais */
+    --detalhe-azul: #1D74F2;   /* Azul óptico para simular os raios de luz e blocos de física */
+    --texto: #1E1E24;          /* Cinza escuro de alta legibilidade para evitar fadiga visual */
+    --fundo: #F8F9FA;          /* Fundo claro limpo e moderno */
+    --fundo-cartao: #F3F1F8;   /* Fundo sutil arroxeado para os cards técnicos */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 22px;
+    line-height: 1.6;
+    color: var(--texto);
+    background-color: var(--fundo);
+}
+
+/* --- MENU DE ACESSIBILIDADE --- */
+.barra-acessibilidade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #111116;
+    color: white;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    z-index: 1000;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.botao-controle {
+    background: white;
+    color: #111116;
+    border: 2px solid var(--detalhe-azul);
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.botao-controle:hover {
+    background: var(--detalhe-azul);
+    color: white;
+}
+
+.botao-leitura {
+    background: var(--secundaria);
+    color: white;
+    border: none;
+}
+
+.botao-leitura:hover {
+    background: #005E44;
+}
+
+/* 1. Início: Banner Modernizado */
+.banner {
+    background-color: var(--primaria);
+    color: white;
+    padding: 70px 20px;
+    text-align: center;
+    border-bottom: 10px solid var(--secundaria);
+}
+
+.banner h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    padding-top: 70px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.botao-ajuda {
+    display: inline-block;
+    background-color: var(--detalhe-azul);
+    color: white;
+    padding: 20px 40px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    font-size: 1.3rem;
+    border: 3px solid white;
+    box-shadow: 0 5px 20px rgba(29, 116, 242, 0.4);
+    transition: all 0.2s ease;
+}
+
+.botao-ajuda:hover {
+    background-color: #0B5ED7;
+    transform: translateY(-2px);
+}
+
+.botao-ajuda:active {
+    transform: scale(0.95);
+}
+
+.botao-fechar {
+    background-color: #6C757D;
+    box-shadow: none;
+    margin-top: 20px;
+}
+
+.botao-fechar:hover {
+    background-color: #5A6268;
+}
+
+.conteudo {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.modal-fundo {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+}
+
+/* Modal de Explicação */
+.modal-conteudo {
+    background-color: #FFFFFF;
+    padding: 40px;
+    border-radius: 20px;
+    border: 3px solid var(--detalhe-azul);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    width: 650px;
+    margin: 0 !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+ol {
+    padding: 20px 40px;
+}
+
+ol li {
+    margin-bottom: 12px;
+}
+
+h2 {
+    color: var(--primaria);
+    border-bottom: 4px solid var(--secundaria);
+    margin: 50px 0 25px;
+    padding-bottom: 12px;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+/* 2. Cards de Classificação da Imagem */
+.grade-dicas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.cartao-dica {
+    background: var(--fundo-cartao);
+    padding: 25px;
+    border-radius: 16px;
+    border-top: 8px solid var(--primaria);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+.cartao-dica strong {
+    display: block;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: var(--primaria);
+}
+
+/* 3. Função Principal */
+.caixa-direitos {
+    background-color: #E6F4EA;
+    padding: 40px;
+    border-radius: 20px;
+    border: 2px solid var(--secundaria);
+}
+
+.caixa-direitos p {
+    margin-bottom: 20px;
+}
+
+.caixa-direitos ul {
+    padding-left: 30px;
+}
+
+.caixa-direitos li {
+    margin-bottom: 10px;
+}
+
+/* --- 4. Componentes do Sistema --- */
+.alerta-golpe {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+}
+
+.alerta-golpe li {
+    background: #FFFFFF;
+    padding: 25px;
+    border-radius: 20px;
+    border: 2px solid #E2E8F0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+.alerta-golpe li:hover {
+    border-color: var(--detalhe-azul);
+    transform: translateY(-2px);
+}
+
+.alerta-golpe .icone-alerta {
+    font-size: 2.5rem;
+    background: #EDF5FF;
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(29, 116, 242, 0.1);
+}
+
+footer {
+    display: block;
+    background: var(--primaria);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 70px;
+    border-top: 5px solid var(--secundaria);
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+/* Ajustes Responsivos Magníficos */
+@media (max-width: 600px) {
+    body {
+        font-size: 20px;
+    }
+
+    .banner h1 {
+        font-size: 2.2rem;
+        padding-top: 90px;
+    }
+
+    .botao-ajuda {
+        width: 100%;
+        padding: 15px;
+        font-size: 1.1rem;
+    }
+
+    .alerta-golpe {
+        grid-template-columns: 1fr;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}

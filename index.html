@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo de Óptica: Instrumentos de Ampliação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- MENU DE ACESSIBILIDADE -->
+    <nav class="barra-acessibilidade" aria-label="Controles de Acessibilidade">
+        <button id="btnAumentaTexto" class="botao-controle" title="Aumentar texto">A+</button>
+        <button id="btnDiminuiTexto" class="botao-controle" title="Diminuir texto">A-</button>
+        <button id="btnVoz" class="botao-controle botao-leitura">🔊 Ouvir Página</button>
+    </nav>
+
+    <main>
+
+        <!-- 1. INÍCIO GERAL DO SITE -->
+        <section class="banner">
+            <h1>Instrumentos de Ampliação</h1>
+            <p style="margin-bottom: 30px;">Entenda a física, o funcionamento e as atividades práticas sobre dispositivos ópticos.</p>
+            <a href="#contato-ajuda" class="botao-ajuda">VER EXPLICAÇÃO DOS PROJETORES</a>
+        </section>
+
+        <!-- ABAS DE NAVEGAÇÃO -->
+        <div class="abas-navegacao" style="text-align: center; margin-top: 30px; display: flex; justify-content: center; gap: 10px; padding: 0 20px; flex-wrap: wrap;">
+            <a href="#lupa" class="botao-aba" style="padding: 12px 25px; background: var(--primaria); color: white; text-decoration: none; border-radius: 8px; font-weight: bold;">1. Lupa Manual</a>
+            <a href="#projetor" class="botao-aba" style="padding: 12px 25px; background: var(--detalhe-azul); color: white; text-decoration: none; border-radius: 8px; font-weight: bold;">2. Projetor de Textos</a>
+            <a href="#atividade" class="botao-aba" style="padding: 12px 25px; background: var(--secundaria); color: white; text-decoration: none; border-radius: 8px; font-weight: bold;">3. Atividade Prática</a>
+        </div>
+
+        <div class="conteudo">
+
+            <!-- SEÇÃO 1: LUPA MANUAL -->
+            <div id="lupa" style="padding-top: 40px; margin-bottom: 50px;">
+                <h2 style="color: var(--primaria); font-size: 2.3rem; margin-bottom: 20px;">1. Estudo da Lupa Manual</h2>
+                
+                <!-- IMAGEM 1: INFOGRÁFICO DA LUPA MANUAL -->
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <img src="lupa-manual.png" alt="Infográfico ilustrativo da Lupa Manual mostrando o livro objeto, a lente e o olho recebendo a imagem ampliada" style="width: 100%; max-width: 600px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 2px solid #ddd;">
+                </div>
+
+                <!-- IMAGEM 2: DIAGRAMA GEOMÉTRICO DOS RAIOS -->
+                <div style="text-align: center; margin-bottom: 40px;">
+                    <img src="diagrama-lupa.png" alt="Diagrama físico dos raios de luz paralelos sofrendo refração na lente convergente da lupa e formando uma imagem virtual" style="width: 100%; max-width: 600px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 2px solid #ddd;">
+                </div>
+
+                <div class="grade-dicas">
+                    <div class="cartao-dica">
+                        <strong>Natureza: Virtual</strong>
+                        Formada pelo prolongamento dos raios de luz, não pode ser projetada em telas.
+                    </div>
+                    <div class="cartao-dica">
+                        <strong>Orientação: Direita</strong>
+                        A imagem mantém a mesma posição vertical do objeto real.
+                    </div>
+                    <div class="cartao-dica">
+                        <strong>Tamanho: Maior e Afastada</strong>
+                        Amplia as dimensões para facilitar a visão de detalhes.
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEÇÃO 2: PROJETOR DE TEXTOS -->
+            <div id="projetor" style="border-top: 4px dashed var(--detalhe-azul); padding-top: 40px; margin-bottom: 50px;">
+                <h2 style="color: var(--primaria); font-size: 2.3rem; margin-bottom: 20px;">2. Estudo do Projetor de Textos</h2>
+                
+                <!-- IMAGEM 3: CÂMERA DOCUMENTAL DIGITAL -->
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <img src="camera-documental.png" alt="Esquema da Câmera Documental mostrando o documento, a lente da câmera, o sensor digital e a tela de projeção final" style="width: 100%; max-width: 550px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 2px solid #ddd;">
+                </div>
+
+                <!-- IMAGEM 4: RETROPROJETOR CLÁSSICO COM ESPELHO -->
+                <div style="text-align: center; margin-bottom: 40px;">
+                    <img src="retroprojetor.png" alt="Diagrama do retroprojetor clássico onde a luz atravessa o objeto transparente, passa pela lente e rebate no espelho de 45 graus para projetar na tela" style="width: 100%; max-width: 550px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 2px solid #ddd;">
+                </div>
+
+                <p style="margin-bottom: 20px;">O projetor é um aparelho que usa a luz para ampliar textos ou imagens e exibir em uma tela, facilitando a leitura de documentos.</p>
+                
+                <div class="modal-fundo">
+                    <section id="contato-ajuda" style="margin-top: 60px;" class="modal-conteudo">
+                        <h2 style="margin-top: 0;">Funcionamento do Projetor</h2>
+                        <p><strong>Explicação em Linguagem Simples:</strong> A luz passa pelo texto transparente e atravessa a lente do projetor. A lente muda a direção dos raios de luz e forma uma imagem real, invertida e ampliada. Depois, o espelho reflete a imagem para a tela, onde ela pode ser vista por todas as pessoas.</p>
+                        <button class="botao-ajuda botao-fechar">Fechar Explicação</button>
+                    </section>
+                </div>
+
+                <div class="grade-dicas">
+                    <div class="cartao-dica" style="border-left-color: var(--detalhe-azul);">
+                        <strong>Natureza: Real</strong>
+                        Ao contrário da lupa, a imagem do projetor clássico é real porque é projetada diretamente sobre uma tela externa.
+                    </div>
+                    <div class="cartao-dica" style="border-left-color: var(--detalhe-azul);">
+                        <strong>Orientação: Invertida</strong>
+                        A lente inverte a imagem (de ponta-cabeça). O sistema ou o operador ajusta o documento para que a leitura fique legível na tela.
+                    </div>
+                    <div class="cartao-dica" style="border-left-color: var(--detalhe-azul);">
+                        <strong>Tamanho: Maior (Ampliada)</strong>
+                        Gera uma ampliação em larga escala ideal para exibição coletiva.
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEÇÃO 3: PASSO A PASSO DA ATIVIDADE -->
+            <div id="atividade" style="border-top: 4px dashed var(--secundaria); padding-top: 40px;">
+                <h2 style="color: var(--secundaria); font-size: 2.3rem;">3. Passo a Passo da Atividade</h2>
+                <div class="caixa-direitos" style="margin-top: 20px;">
+                    <p>Siga o roteiro do exercício proposto em sala de aula:</p>
+                    <ol style="padding: 10px 20px;">
+                        <li><strong>Formem as equipes:</strong> Organizem-se nos grupos determinados.</li>
+                        <li><strong>Escolham um gadget assistivo:</strong> Definam se vão trabalhar com a Lupa Manual ou com o Projetor de Textos.</li>
+                        <li><strong>Façam um diagrama:</strong> Desenhem o caminho da luz desde o objeto de origem até a formação final da imagem.</li>
+                        <li><strong>Classifiquem a imagem formada:</strong> Identifiquem as propriedades de Natureza (real ou virtual), Orientação (direita ou invertida) e Tamanho (maior, menor ou igual).</li>
+                        <li><strong>Gravem ou escrevam uma explicação:</strong> Usem linguagem simples para detalhar como a luz percorre o dispositivo. <em>Dica: "A luz refletida pelo objeto passa pela lente, muda de direção e chega aos olhos."</em></li>
+                        <li><strong>Publiquem o resultado:</strong> Entreguem o diagrama e o texto explicativo no local indicado pelo professor.</li>
+                    </ol>
+                </div>
+            </div>
+
+        </div>
+
+        <footer>
+            <p><strong>Laboratório de Ciências e Óptica Aplicada</strong></p>
+            <p>Guia adaptado e acessível para o desenvolvimento de práticas pedagógicas.</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

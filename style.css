@@ -1,10 +1,10 @@
 :root {
-    --primaria: #4A154B;       /* Roxo escuro para títulos e cabeçalhos (inspirado nas canetas do infográfico) */
-    --secundaria: #007A5A;     /* Verde esmeralda para os destaques e funções primordiais */
-    --detalhe-azul: #1D74F2;   /* Azul óptico para simular os raios de luz e blocos de física */
-    --texto: #1E1E24;          /* Cinza escuro de alta legibilidade para evitar fadiga visual */
+    --primaria: #4A154B;       /* Roxo escuro para títulos e cabeçalhos */
+    --secundaria: #007A5A;     /* Verde esmeralda para os destaques e funções */
+    --detalhe-azul: #1D74F2;   /* Azul óptico para simular os raios de luz */
+    --texto: #1E1E24;          /* Cinza escuro de alta legibilidade */
     --fundo: #F8F9FA;          /* Fundo claro limpo e moderno */
-    --fundo-cartao: #F3F1F8;   /* Fundo sutil arroxeado para os cards técnicos */
+    --fundo-cartao: #F3F1F8;   /* Fundo sutil arroxeado para os cards */
 }
 
 * {
@@ -13,9 +13,14 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+    font-size: 22px; /* Base escalável para o funcionamento perfeito do zoom */
+    transition: font-size 0.2s ease;
+}
+
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    font-size: 22px;
     line-height: 1.6;
     color: var(--texto);
     background-color: var(--fundo);
@@ -68,7 +73,7 @@ body {
     background: #005E44;
 }
 
-/* 1. Início: Banner Modernizado */
+/* Banner Principal */
 .banner {
     background-color: var(--primaria);
     color: white;
@@ -136,7 +141,6 @@ body {
     backdrop-filter: blur(4px);
 }
 
-/* Modal de Explicação */
 .modal-conteudo {
     background-color: #FFFFFF;
     padding: 40px;
@@ -169,7 +173,6 @@ h2 {
     font-weight: 700;
 }
 
-/* 2. Cards de Classificação da Imagem */
 .grade-dicas {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -191,7 +194,6 @@ h2 {
     color: var(--primaria);
 }
 
-/* 3. Função Principal */
 .caixa-direitos {
     background-color: #E6F4EA;
     padding: 40px;
@@ -203,15 +205,50 @@ h2 {
     margin-bottom: 20px;
 }
 
-.caixa-direitos ul {
-    padding-left: 30px;
+/* --- ESTILIZAÇÃO DO MÓDULO DO QR CODE --- */
+#secao-qrcode {
+    text-align: center;
+    margin: 50px auto 20px auto;
+    padding: 30px 20px;
+    max-width: 340px;
+    background-color: var(--fundo-cartao);
+    border-radius: 20px;
+    border: 3px dashed var(--primaria);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
 }
 
-.caixa-direitos li {
-    margin-bottom: 10px;
+#secao-qrcode h3 {
+    color: var(--primaria);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-weight: 700;
 }
 
-/* --- 4. Componentes do Sistema --- */
+#qrcode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px auto;
+    padding: 12px;
+    background: white; 
+    border-radius: 12px;
+    width: 204px;
+    height: 204px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+#qrcode img {
+    width: 180px;
+    height: 180px;
+    display: block;
+}
+
+#secao-qrcode p {
+    font-size: 0.9rem;
+    color: var(--texto);
+    line-height: 1.4;
+}
+
 .alerta-golpe {
     list-style: none;
     display: grid;
@@ -236,17 +273,9 @@ h2 {
     transform: translateY(-2px);
 }
 
-.alerta-golpe .icone-alerta {
-    font-size: 2.5rem;
-    background: #EDF5FF;
-    width: 75px;
-    height: 75px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    flex-shrink: 0;
-    box-shadow: 0 4px 10px rgba(29, 116, 242, 0.1);
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 footer {
@@ -263,10 +292,9 @@ footer p {
     margin-bottom: 10px;
 }
 
-/* Ajustes Responsivos Magníficos */
 @media (max-width: 600px) {
-    body {
-        font-size: 20px;
+    html {
+        font-size: 20px; /* Ajuste responsivo no html para casar com a lógica de rem/zoom */
     }
 
     .banner h1 {
@@ -285,6 +313,3 @@ footer p {
     }
 }
 
-html {
-    scroll-behavior: smooth;
-}
